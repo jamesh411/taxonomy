@@ -3,12 +3,32 @@
   <head>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script> <!--https://d3js.org, data vis/-->
+    <script language="javascript" type="text/javascript" src="Model.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="utf-8" />
 
   </head>
   <body>
     <main>
+
+      <div class="card">
+        <div class="container">
+          <p>Taxonomy</p>
+          <label for="site-search">Search the data:</label>
+          <input type="search" id="site-search">
+
+          <div class="options">
+            <div class="result">
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button id="add_button">Add</button>
+
     </main>
     <script src="sketch.js"></script>
   </body>
