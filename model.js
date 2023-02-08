@@ -7,6 +7,7 @@ class Model{
     {
         console.log("added new item:",item);
         this.list.push(item);
+        
     }
 
     // emptyList()
