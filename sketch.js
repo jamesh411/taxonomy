@@ -1,6 +1,7 @@
 var titles;
 var records;
 var results;
+var data;
 
 function preload() {
   // Load the data from the csv file
@@ -12,15 +13,41 @@ function setup() {
    titles = data.columns;
    records = data.rows;
    results = [];
+
+  //  text("There are " + data.getRowCount() + 
+  //      " rows in the table", 20, 120);
+   
+
 }
 
 function userInputChange(){
   //console.log('changed to: ', document.getElementById("site-search").value);
   
   var keyword = document.getElementById("site-search").value;
-  for(let i = 0; i < records.length; i++) {
-    results = data.findRows(keyword, 'PRIMARY_COM_NAME');
+  console.log(keyword);
+
+  // Find the result in  the column of 'PRIMARY_COM_NAME'
+  // findResults is an Array
+  findResults = data.findRow(keyword, 'PRIMARY_COM_NAME');
+  
+
+  if (findResults) {
+    console.log("in here");
+    text("The row that matches the query is", 20, 120);
+
+    // Display the matched value
+    text(findResults.arr[0], 20, 140);
+    text(findResults.arr[1], 120, 140);
+    text(findResults.arr[2], 220, 140);
+    text(findResults.arr[3], 320, 140);
   }
+
+
+
+
+  // for(let i = 0; i < records.length; i++) {
+  //   results = data.findRows(keyword, 'PRIMARY_COM_NAME');
+  // }
   // for(let i = 0; i < records.length; i++) {
   //   for(let j = 0; j < titles.length; j++) {
   //     //if (!results[0].includes(data.get(i, j)))
@@ -28,12 +55,13 @@ function userInputChange(){
   //   }
   //   //data.findRows(keyword, )
   // }
-  print(results);
+  //print(results);
 }
 
 
+
 function draw() {
-  background(233,196,107);
+  //background(233,196,107);
 }
 
 
