@@ -4,16 +4,24 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
-    <script src="https://d3js.org/d3.v7.min.js"></script> <!--https://d3js.org, data vis/-->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
     <script language="javascript" type="text/javascript" src="Model.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.5.0/papaparse.min.js">
+    </script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="utf-8" />
 
+
   </head>
   <body>
-    <main>
+    
+    <p>Taxonomy</p>
+    <label for="site-search">Search the data:</label>
+    <input type="search" id="site-search" onkeyup="userInputChange()">
 
-      <div class="card">
+      <!--------------------------->
+      <!--div class="card">
         <div class="container">
           <p>Taxonomy</p>
           <label for="site-search">Search the data:</label>
@@ -31,9 +39,11 @@
       <div id="clone_container">
         hi
         <div id="text_sample">hi james</div>
-      </div>
-
-    </main>
-    <script src="sketch.js"></script>
+      </div-->
+    
   </body>
+  <script language="javascript" type="text/javascript" src="sketch.js"></script>
 </html>
+
+
+
